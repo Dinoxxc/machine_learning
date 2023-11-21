@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chicken Price Prediction</title>
+</head>
+<body>
+    <h1>Chicken Price Prediction</h1>
+    <form method="post" action="/predict">
+        <label for="feed_cost">Enter Feed Cost:</label>
+        <input type="text" id="feed_cost" name="feed_cost" required>
+        <button type="submit">Predict</button>
+    </form>
+    {% if feed_cost %}
+        <p>Feed Cost: {{ feed_cost }}</p>
+        <p>Predicted Chicken Price: {{ predicted_price }}</p>
+    {% endif %}
+</body>
+</html>
